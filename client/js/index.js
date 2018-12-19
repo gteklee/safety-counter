@@ -1,6 +1,6 @@
 /** JULY 24TH 2017 -- START DATE **/
 
-deleteStorage();
+//deleteStorage();
 
 let IS_DATE_STARTED = false; // Has the start date been selected.
 let START_DATE = "";		 // Date timer was started (first accident).
