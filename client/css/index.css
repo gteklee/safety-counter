@@ -37,4 +37,5 @@ table { table-layout: fixed; }
 #quote { font-style: italic; color: #0094DE; margin: 0; }
 #source { font-size: 30px; }
 
+#update-ready p { color: black; font-weight: bold; margin-top: 10px; }
 .version-update:hover { cursor: pointer; color: #4286f4; } 

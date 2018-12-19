@@ -3,11 +3,10 @@ const {app, BrowserWindow, Menu} = require('electron');
 const {ipcMain} = require('electron');
 const {autoUpdater} = require('electron-updater');
 const path = require('path');
-const url = require('url');
 
 // Automatically reload electron app on save
 // !! MUST BE REMOVED OR COMMENTED OUT BEFORE BUILD !!
-//require('electron-reload')(__dirname);
+// require('electron-reload')(__dirname);
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
