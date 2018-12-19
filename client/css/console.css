@@ -1,0 +1,78 @@
+.blur { position: fixed; height: 100%; width: 100%; background-color: black; opacity: .85; border: solid; z-index: 0; top: 0; }
+
+.console_container { position: fixed; bottom: 0; width: 100%; }
+
+.console_open { border: solid; width: 55%; -webkit-transition: height .5s; height: 350px; margin: auto; background-color: white; 
+		   		border-top-left-radius: 15px;
+		   		border-top-right-radius: 15px; 
+		   		border-bottom: none; 
+		   		border-width: 1px; }
+	.console_table_open { /*border: solid;*/ width: 100%; height: 100%; }
+	.p_table { color: black; }
+	.console_data_open { /*border: solid;*/ padding: 10px;}
+		#console_data_left { text-align: left; }
+		#console_data_center { text-align: center; }
+		#console_data_right { text-align: right; }
+		#console_data_bottom_right { text-align: center; }
+
+.console_close { -webkit-transition: height .5s; height: 0px; border: none; }
+
+#console_button { border: solid; height: 30px; width: 200px; margin: auto; background-color: white; text-align: center;
+				  border-top-left-radius: 5px;
+		  		  border-top-right-radius: 5px; 
+		  		  border-bottom: none; 
+		  		  border-width: 1px; }
+#console_button:hover { cursor: pointer; }
+
+.p_table { font-weight: bold; }
+.p_td_title { color: #0094DE; font-weight: bold; text-decoration: underline; }
+.p_version { color: black; font-weight: bold; }
+#console_data_center_top { vertical-align: top; text-align: center; }
+
+/**--------------------------------------- ACCIDENT HISTORY ---------------------------------------- **/
+.accident_count_container { position: fixed; bottom: 0; text-align: center;}
+
+.accident_count_button { border: solid; width: 50%; height: 30px; width: 250px; background-color: white;
+						 border-top-left-radius: 5px;
+						 border-top-right-radius: 5px;
+						 border-bottom: solid;
+						 border-width: 2px; 
+						 -webkit-transition: background-color .5s; }
+.accident_count_button:hover { background-color: #0094DE; color: white; border-color: black; 
+							   -webkit-transition: background-color .5s; cursor: pointer; }
+.accident_count_button:hover > .p_accident_count { color: white; }
+.p_accident_count { color: black; }
+.p_accident_count:hover { cursor: pointer; color: white; } 
+
+.accident_history_close { border: solid; -webkit-transition: height .4s; height: 0px; background-color: white; 
+						  border-width: 2px;
+						  border-bottom: none; 
+						  border-top: none; }
+.accident_history_open { border: solid; -webkit-transition: height .4s; height: 300px; background-color: white; color: black; 
+						 border-width: 2px; 
+						 border-bottom: none; 
+						 border-top: none;
+						 overflow: auto; }
+
+.history_accident { text-align: center; padding: 10px; }
+#p_history_id { color: black; font-size: 10px; }
+#p_history { color: black; display: block; }
+
+/** ------------------------------------------ QUOTE ----------------------------------------------- **/
+#update_quote { text-align: center; width: 20px;  }
+
+.quote_blur { position: fixed; height: 100%; width: 100%; background-color: black; opacity: .85; border: solid; z-index: 0; top: 0; } 
+
+.quote_console_open { position: fixed; height: 200px; width: 400px; background-color: white; left: 50%; top: 50%; transform: translate(-50%, -50%); 
+                      border: solid; 
+                      border-radius: 15px; }
+.quote_console_close { display: none; }
+	
+	.quote_input_container { text-align: left; padding: 10px; }
+
+	.p_quote { color: black; font-weight: bold; } 
+
+	.quote_input { text-align: left; border: solid; border-width: 2px; border-radius: 5px; height: 20px; padding: 5px; }
+
+	.quote_button_container { text-align: center; }
+    #quote_button { text-align: center; display: inline-block; }

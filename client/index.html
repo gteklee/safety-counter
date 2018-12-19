@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/console.css">
+    <link rel="stylesheet" type="text/css" href="css/input.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="js/jquery-ui/jquery-ui.min.css">
+
+    <!-- jQuery -->
+	<script> window.$ = window.jQuery = require('jquery'); </script>
+	<script language="javascript" type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title> Gtek Safety Counter </title>
+
+  </head>
+  <body>
+
+    <!-- Logo at the top of the Window -->
+	<div class="banner"> <img class="logo" src="img/logo.png"> </div>
+
+	<!-- The Counter as a whole: Title and Timer -->
+	<div class="counter">
+		<!-- Title of the Counter -->
+		<div class="header">
+			<h1> ACCIDENT FREE FOR </h1>
+		</div>
+
+		<!-- Counter in DAYS : HOURS : MINUTES : SECONDS -->
+		<div class="timer">
+
+			<p class="time" id="years"> 0 </p>
+			<p> : </p>
+			<p class="time" id="days"> 000 </p>
+			<p> : </p>
+			<p class="time" id="hours"> 00 </p>
+			<p> : </p>
+			<p class="time" id="minutes"> 00 </p>
+			<p> : </p>
+			<p class="time" id="seconds"> 00 </p>
+
+		</div>
+
+		<!-- Display 'Years', 'Days', 'Hours', 'Minutes', 'Seconds' -->
+		<div class="timer_text">
+			<h1 class="_text" id="_text_years"> YEARS </h1>
+			<h1 class="_text" id="_text_colon">  </h1>
+			<h1 class="_text" id="_text_days"> DAYS </h1>
+			<h1 class="_text" id="_text_colon">  </h1>
+			<h1 class="_text" id="_text_hours"> HOURS </h1>
+			<h1 class="_text" id="_text_colon">  </h1>
+			<h1 class="_text" id="_text_minutes"> MINUTES </h1>
+			<h1 class="_text" id="_text_colon">  </h1>
+			<h1 class="_text" id="_text_seconds"> SECONDS </h1>
+		</div>
+
+	</div>
+
+	<!-- Safety Quote Displayed Below Counter -->
+	<div class="quote">
+		<p id="quote"> "For safety is not a gadget but a state of mind." </p>
+		<p id="source"> -- Eleanor Everet </p>
+	</div>
+
+	<!-- Footer Showing Info / Stats -->
+	<div class="footer">
+	</div>
+
+	<!-- Blur when console comes up -->
+	<div class="blur"></div>
+
+	<!-- Admin Console -->
+	<div class="console_container">
+
+		<div id="console_button" onclick="hideConsole()"> <i class="fa fa-caret-down fa-2x" aria-hidden="true"></i> </div>
+		<!--<i class="fa fa-caret-up" aria-hidden="true"></i>-->
+
+		<div class="console_open">
+
+			<table class="console_table_open">
+				<tr class="console_row_open">
+					<td class="console_data_open" id="console_data_left"> <p class="p_table"> First Accident: </p> <br/> <input onchange="setTimer()" type="text" class="date_input" id="datepicker"> </td>
+					<td class="console_data_open" id="console_data_center_top"> <p class="p_td_title"> ADMIN CONSOLE </p> <div id="update-ready"> <p> </p> </div> </td>
+					<td class="console_data_open" id="console_data_right"> </td>
+				</tr>
+				<tr class="console_row_open">
+					<td class="console_data_open" id="console_data_left"> <p class="p_table"> Today's Date: </p> <br/> <input type="text" class="date_input" id="date_today" disabled> </td>
+					<td class="console_data_open" id="console_data_center"> <div class="button" id="update_quote" onclick="toggleQuoteConsole()"> " " </div> </td>
+					<td class="console_data_open" id="console_data_right"> </td>
+				</tr>
+				<tr class="console_row_open">
+					<td class="console_data_open" id="console_data_left"> <p class="p_table"> Last Accident: </p> <br/> <input type="text" class="date_input" id="date_last_accident" disabled> <i onclick="deleteLastAccident()" class="fa fa-times-circle-o" aria-hidden="true"></i> </td>
+					<td class="console_data_open" id="console_data_center"> <div type="text" class="date_input" id="date_accident_report" disabled></div> <div class="button" id="accident_report" onclick="toggleCalendar()"> REPORT ACCIDENT </div> </td>
+					<td class="console_data_open" id="console_data_bottom_right"></td>
+				</tr>
+			</table>
+
+		</div>
+
+	</div>
+
+	<div class="accident_count_container">
+		<div class="accident_count_button" onclick="toggleHistory()"> 
+			<p class="p_accident_count"> Accident Count: 0 </p> 
+		</div>
+
+		<div class="accident_history_close" id="history">
+			<br/><p id="p_history"> History: </p>
+		</div>
+	</div>
+
+	<div class="quote_blur"></div>
+
+	<!-- Hour Selection -->
+	<div class="hour_selection_container">
+		<p class="p_table"> Select Hour Accident Occured: </p>
+		<select class="hour_selection" selected="default" onchange="reportAccident()">
+			<option value="default"> </option>
+			<option value="0"> 0 </option>
+			<option value="1"> 1 </option>
+			<option value="2"> 2 </option>
+			<option value="3"> 3 </option>
+			<option value="4"> 4 </option>
+			<option value="5"> 5 </option>
+			<option value="6"> 6 </option>
+			<option value="7"> 7 </option>
+			<option value="8"> 8 </option>
+			<option value="9"> 9 </option>
+			<option value="10"> 10 </option>
+			<option value="11"> 11 </option>
+			<option value="12"> 12 </option>
+			<option value="13"> 13 </option>
+			<option value="14"> 14 </option>
+			<option value="15"> 15 </option>
+			<option value="16"> 16 </option>
+			<option value="17"> 17 </option>
+			<option value="18"> 18 </option>
+			<option value="19"> 19 </option>
+			<option value="20"> 20 </option>
+			<option value="21"> 21 </option>
+			<option value="22"> 22 </option>
+			<option value="23"> 23 </option>
+		</select>
+
+		<!-- Buttons -->
+		<div class="quote_button_container">
+			<div class="button" id="quote_button" onclick="toggleHourSelection()"> CANCEL </div>
+		</div>
+	</div>
+
+	<!-- Quote Console -->
+	<div class="quote_console_open">
+		<div class="quote_input_container">
+			<p class="p_quote"> Update Quote: </p><br/>
+			<input class="quote_input" id="quote_input_quote">
+		</div>
+
+		<div class="quote_input_container">
+			<p class="p_quote"> Update Source: </p><br/>
+			<input type="text" class="quote_input" id="quote_input_src">
+		</div>
+
+		<!-- Buttons -->
+		<div class="quote_button_container">
+			<div class="button" id="quote_button" onclick="updateQuote()"> UPDATE </div>
+			<div class="button" id="quote_button" onclick="toggleQuoteConsole()"> CANCEL </div>
+		</div>
+
+	</div>
+
+	<script language="javascript" type="text/javascript" src="js/index.js"></script>
+	<script language="javascript" type="text/javascript" src="js/storage.js"></script>
+	<script language="javascript" type="text/javascript" src="js/quotes.js"></script>
+
+	<script>
+	  require('../renderer.js')
+	  require('./js/ipc.js');
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "name": "safety-counter",
+  "version": "0.0.1",
+  "description": "Gtek Accedient Free Count Up Timer",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Henry Lee Barton III",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "^3.0.7",
+    "electron-reload": "^1.4.0"
+  },
+  "dependencies": {
+    "electron-updater": "^4.0.6",
+    "jquery": "^3.3.1"
+  }
+}

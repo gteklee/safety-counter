@@ -1,0 +1,24 @@
+input { text-align: center; }
+input:hover { cursor: default; }
+
+textarea { resize: none; }
+
+.date_input { border-radius: 5px; height: 20px; padding: 5px; border-color: black; }
+.date_input:disabled { background-color: #FFF; color: black; }
+.ui-datepicker-trigger { border: none; background: none; margin-top: 5px; }
+#datepicker:hover { cursor: pointer; }
+
+/* Report Accident */
+.button { border: solid; border-width: 2px; border-radius: 5px; width: 120px; padding: 10px; margin: auto; font-weight: bold; 
+	  	  -webkit-transition: background-color .5s;}
+.button:hover { cursor: pointer; background-color: #0094DE; color: white; border-color: black; 
+				-webkit-transition: background-color .5s; }
+#date_accident_report { position: absolute; bottom: 90px; right: 570px; height: 235px; }
+
+.fa-times-circle-o:hover { cursor: pointer; color: red; }
+
+/** ------------------------------------ HOUR SELECTION--------------------------------------------- **/
+.hour_selection_container { position: fixed; height: 130px; width: 200px; background-color: white; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    border: solid;
+    border-radius: 15px; padding: 10px; text-align: center; }
+.hour_selection { text-align: center; margin: 10px; padding: 5px; width: 80px; border: solid; border-width: 2px; border-radius: 5px; font-weight: bold; font-size: 15px; }

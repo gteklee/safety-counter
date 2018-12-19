@@ -1,0 +1,40 @@
+/** REMOVE TEXT HIGHLIGHTING IN ALL BROWSERS **/
+* { -webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+body { background-color: #303030; font-family: Arial; margin: 0; padding: 0; }
+
+p { margin: 0; display: inline-table; color: white; }
+p:hover { cursor: default; }
+
+table { table-layout: fixed; }
+
+.banner { 
+    position: fixed; background-color: #1c1c1c; 
+    height: 85px;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    text-align: center; 
+    -webkit-app-region: drag;
+}
+.logo { margin-top: 5px; position: relative; }
+.counter { text-align: center; }
+.header { color: white; padding: 0; font-size: 2em; }
+.timer { margin: 0; font-size: 12em; }
+
+._text { display: inline-table; color: white; width: 214px; }
+#_text_years { width: 100px; }
+#_text_days { width: 321px; }
+#_text_colon { width: 54px; margin: 0 49px 0 49px; }
+
+.quote { padding: 40px; text-align: center; font-size: 58px; }
+.quote > p { display: block; }
+#quote { font-style: italic; color: #0094DE; margin: 0; }
+#source { font-size: 30px; }
+
+.version-update:hover { cursor: pointer; color: #4286f4; } 
